@@ -28,10 +28,10 @@ const Header = () => {
   return (
     <>
       <header 
-        className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
+        className={`fixed top-6 left-1/2 -translate-x-1/2 w-[95%] lg:w-[calc(100%-4rem)] max-w-[1280px] z-[100] transition-all duration-500 rounded-3xl border border-white/10 ${
           isSticky 
-            ? "bg-[#0d5c2e]/95 backdrop-blur-lg shadow-2xl py-3" 
-            : "bg-transparent py-6"
+            ? "bg-[#0d5c2e]/80 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] py-3" 
+            : "bg-white/5 backdrop-blur-md py-4"
         }`}
       >
         <div className="container mx-auto px-6 lg:max-w-[1280px]">
