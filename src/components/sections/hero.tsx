@@ -36,12 +36,13 @@ const HeroSection = () => {
                 <div className="bg-white/10 backdrop-blur-md p-1.5 rounded-xl border border-white/20">
                   <Image src={LOGO_ATAL} alt="ATAL" width={40} height={40} className="h-10 w-auto object-contain" />
                 </div>
-                <div className="h-10 w-px bg-white/30 mx-1 hidden sm:block" />
-                <div>
-                  <span className="block text-[10px] font-bold tracking-widest uppercase opacity-80">Sponsored By</span>
-                  <span className="block text-xs font-extrabold text-yellow-400">AICTE Training and Learning (ATAL) Academy</span>
+                  <div className="h-10 w-px bg-white/30 mx-1 hidden sm:block" />
+                  <div>
+                    <span className="block text-[10px] font-bold tracking-widest uppercase opacity-80">Sponsored By</span>
+                    <span className="block text-xs font-extrabold text-yellow-400">AICTE Training and Learning (ATAL) Academy</span>
+                    <span className="block text-[10px] font-bold text-white/60">FDP ID: 1748495741</span>
+                  </div>
                 </div>
-              </div>
 
               <div className="space-y-2 mb-6 animate-in fade-in slide-in-from-left-10 duration-1000 delay-200">
                 <span className="inline-block px-3 py-0.5 rounded-full bg-yellow-400/20 border border-yellow-400/30 text-yellow-400 text-[10px] font-bold tracking-wider uppercase mb-1">
@@ -108,10 +109,10 @@ const HeroSection = () => {
                     INSTITUTE OF TECHNOLOGY, <br />
                     NASHIK
                   </p>
-                  <div className="flex flex-col gap-0.5 text-[9px] font-bold text-white/60">
-                    <span>NAAC &apos;B+&apos; GRADE ACCREDITED</span>
-                    <span>AFFILIATED TO SPPU, PUNE</span>
-                  </div>
+                    <div className="flex flex-col gap-0.5 text-[9px] font-bold text-white/60">
+                      <span>NAAC &apos;B+&apos; GRADE ACCREDITED (CYCLE 1)</span>
+                      <span>AFFILIATED TO SPPU, PUNE</span>
+                    </div>
                 </div>
               </div>
             </div>

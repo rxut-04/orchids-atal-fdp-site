@@ -31,19 +31,19 @@ const AboutSection = () => {
                 <Users size={28} />
               </div>
               <h3 className="text-2xl font-black text-[#0d5c2e] mb-4">Pravara Rural Education Society</h3>
-              <p className="text-gray-600 leading-relaxed text-justify">
-                Established in July 1964 by Late Padmashri Dr. Vitthalrao Vikhe Patil, the pioneer of Asia&apos;s first cooperative sugar factory. His mission was to make technical education accessible and affordable in rural areas. Today, under the leadership of Hon&apos;ble Chairman Namdar Shri Radhakrishna Vikhe Patil and CEO Dr. Sushmita Vikhe Patil, the society stands as a symbol of academic excellence from pre-primary to doctorate levels.
-              </p>
+                <p className="text-gray-600 leading-relaxed text-justify">
+                  Established in July 1964 by Late Padmashri Dr. Vitthalrao Vikhe Patil, the pioneer of Asia&apos;s first cooperative sugar factory. The society is flourishing under the visionary guidance of Late Padmabhushan Dr. Balasaheb Vikhe Patil, Former Union Minister, Govt. of India. Today, under the leadership of Hon&apos;ble Chairman Namdar Shri Radhakrishna Vikhe Patil and CEO Dr. Susmita Vikhe Patil, the society stands as a symbol of academic excellence, providing education from pre-primary to Ph.D. in various streams like Medical, Pharmacy, and Engineering.
+                </p>
             </div>
 
             <div className="group p-8 bg-white rounded-[32px] shadow-xl shadow-black/5 hover:shadow-2xl hover:shadow-[#0d5c2e]/10 transition-all duration-500 border border-black/5">
               <div className="w-14 h-14 bg-yellow-400 text-[#0d5c2e] rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                 <Info size={28} />
               </div>
-              <h3 className="text-2xl font-black text-[#0d5c2e] mb-4">Sir Visvesvaraya Institute of Technology</h3>
-              <p className="text-gray-600 leading-relaxed text-justify">
-                Established in 1998–99, SVIT Nashik offers diverse UG programs and MBA. With highly qualified faculty and state-of-the-art laboratories, we foster academic growth and innovation. The institute is NAAC &apos;B+&apos; accredited and committed to preparing students for global challenges.
-              </p>
+                <h3 className="text-2xl font-black text-[#0d5c2e] mb-4">Sir Visvesvaraya Institute of Technology</h3>
+                <p className="text-gray-600 leading-relaxed text-justify">
+                  Established in 1998–99, SVIT Nashik offers undergraduate programs in Chemical, Computer, Information Technology and Electronics & Computer Engineering. The institute also offers MBA program. With highly qualified faculty and state-of-the-art laboratories, we foster academic growth and innovation. The institute is NAAC &apos;B+&apos; accredited (Cycle 1) and committed to preparing students for global challenges.
+                </p>
             </div>
           </div>
 
@@ -52,10 +52,10 @@ const AboutSection = () => {
               <div className="w-14 h-14 bg-[#0d5c2e] text-white rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                 <Lightbulb size={28} />
               </div>
-              <h3 className="text-2xl font-black text-[#0d5c2e] mb-4">Chemical Engineering Dept.</h3>
-              <p className="text-gray-600 leading-relaxed text-justify">
-                Recipient of several grants from AICTE (MODROBS) and BCUD (QIP & RPS). The department organizes the annual state-level event &quot;Chemcoalesce&quot; and is supported by dynamic, highly qualified faculty committed to academic excellence.
-              </p>
+                <h3 className="text-2xl font-black text-[#0d5c2e] mb-4">Chemical Engineering Dept.</h3>
+                <p className="text-gray-600 leading-relaxed text-justify">
+                  The department was established in the year 1998 with an intake of 60 students. It is the recipient of several grants from AICTE (MODROBS) and BCUD (QIP & RPS). The department organizes the annual state-level event &quot;Chemcoalesce&quot; and is supported by dynamic, highly qualified faculty committed to academic excellence.
+                </p>
             </div>
 
             <div className="group p-8 bg-[#0d5c2e] text-white rounded-[32px] shadow-2xl shadow-[#0d5c2e]/20 hover:scale-[1.02] transition-all duration-500">
@@ -78,19 +78,20 @@ const AboutSection = () => {
               <span className="w-10 h-1 bg-[#0d5c2e] rounded-full" />
               OBJECTIVES
             </h3>
-            <ul className="space-y-6">
-              {[
-                "Understand fundamental concepts of energy & sustainability",
-                "Explore renewable energy technologies & carbon reduction",
-                "Highlight importance of climate policy & carbon management",
-                "Promote interdisciplinary research for sustainability"
-              ].map((item, i) => (
-                <li key={i} className="flex gap-4 items-start text-gray-700 font-medium">
-                  <div className="mt-1.5 w-2 h-2 rounded-full bg-[#0d5c2e] flex-shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
+              <ul className="space-y-6">
+                {[
+                  "To understand the fundamental concepts of energy and sustainability.",
+                  "To explore renewable energy technologies and their role in carbon reduction.",
+                  "To highlight the importance of climate policy and carbon management.",
+                  "To promote interdisciplinary research and innovation for sustainability.",
+                  "To provide hands-on experience and case studies in energy systems."
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-4 items-start text-gray-700 font-medium">
+                    <div className="mt-1.5 w-2 h-2 rounded-full bg-[#0d5c2e] flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
           </div>
 
           <div className="bg-white p-10 rounded-[40px] border border-yellow-400/20 shadow-xl relative overflow-hidden group">
@@ -99,19 +100,19 @@ const AboutSection = () => {
               <span className="w-10 h-1 bg-yellow-400 rounded-full" />
               EXPECTED OUTCOMES
             </h3>
-            <ul className="space-y-6">
-              {[
-                "Gain in-depth understanding of energy systems",
-                "Equip faculty with teaching methodologies for SDGs",
-                "Facilitate cross-disciplinary engagement",
-                "Explore new research opportunities in sustainability"
-              ].map((item, i) => (
-                <li key={i} className="flex gap-4 items-start text-gray-700 font-medium">
-                  <div className="mt-1.5 w-2 h-2 rounded-full bg-yellow-400 flex-shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
+              <ul className="space-y-6">
+                {[
+                  "Participants will gain an in-depth understanding of energy systems and their impact on the environment.",
+                  "The FDP will equip faculty with tools and methodologies to teach sustainability and climate change.",
+                  "It will facilitate cross-disciplinary engagement and networking among researchers.",
+                  "Participants will explore new research opportunities and innovative solutions for global sustainability."
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-4 items-start text-gray-700 font-medium">
+                    <div className="mt-1.5 w-2 h-2 rounded-full bg-yellow-400 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
           </div>
         </div>
 

@@ -8,25 +8,25 @@ const Committees = () => {
     {
       role: "Chief Patron",
       name: "Hon'ble Namdar Shri. Radhakrishna Vikhe Patil",
-      desc: "Minister Water Resources, Govt. of Maharashtra | Chairman, Loknete Dr. Balasaheb Vikhe Patil (Padma Bhushan Awardee) PRES, Loni",
+      desc: "Minister Water Resources (Godavari & Krishna Valley Development Corporation), Govt. of Maharashtra | Executive Chairman, Pravara Rural Education Society, Loni",
       icon: <ShieldCheck className="w-8 h-8" />
     },
     {
       role: "Patron",
       name: "Hon'ble Sau. Shalinitai Vikhe Patil",
-      desc: "Ex-President, Zilha Parishad, Ahmednagar | Trustee, Loknete Dr. Balasaheb Vikhe Patil (Padma Bhushan Awardee) PRES, Loni",
+      desc: "Ex-President, Zilha Parishad, Ahmednagar | Trustee, Pravara Rural Education Society, Loni",
       icon: <User className="w-8 h-8" />
     },
     {
       role: "Patron",
       name: "Dr. Sujay Vikhe Patil",
-      desc: "Ex. Member of Parliament, Govt of India | Chairman, PDVVPSSK, Loni",
+      desc: "Chairman, PDVVPSSK, Loni",
       icon: <User className="w-8 h-8" />
     },
     {
       role: "CEO",
       name: "Dr. Susmita Vikhe Patil",
-      desc: "CEO, Loknete Dr. Balasaheb Vikhe Patil (Padma Bhushan Awardee) PRES, Loni",
+      desc: "Chief Executive Officer, Pravara Rural Education Society, Loni",
       icon: <Settings className="w-8 h-8" />
     }
   ];

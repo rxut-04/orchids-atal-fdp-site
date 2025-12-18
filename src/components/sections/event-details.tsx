@@ -10,9 +10,9 @@ const EventDetails: React.FC = () => {
     { name: "Shri. Manish Kulkarni", designation: "Head, Projects NuGen Energy, Pune" },
     { name: "Shri. Chandrakant R. Mohikar", designation: "Consultant, EPCCO&M Pune, Maharashtra" },
     { name: "Dr. J. Sudarshan", designation: "Head, Energy, NICMAR University Pune" },
-    { name: "Dr. Pramod Deshpande", designation: "Adjunct Professor" },
-    { name: "Dr. Nitin B. Raut", designation: "Professor, Sohar University, Sultanate of Oman" },
-    { name: "Shri. Gajanan R. Patil", designation: "Director, Urja Bio System Pvt. Ltd." },
+      { name: "Dr. Pramod Deshpande", designation: "Adjunct Professor" },
+      { name: "Dr. Nitin B. Raut", designation: "Professor, Sohar University, P.O. Box 446, Postal Code 311, Sultanate of Oman" },
+      { name: "Shri. Gajanan R. Patil", designation: "Director, Urja Bio System Pvt. Ltd." },
     { name: "Dr. Samir Deshmukh", designation: "Professor, LIT, Nagpur" },
   ];
 
