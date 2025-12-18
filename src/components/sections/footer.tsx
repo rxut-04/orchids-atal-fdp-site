@@ -148,38 +148,44 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Contact Details */}
-          <motion.div variants={itemVariants} className="space-y-8">
-            <h4 className="text-sm font-black uppercase tracking-[0.2em] text-yellow-400 flex items-center gap-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-yellow-400" />
-              Contact Us
-            </h4>
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                  <MapPin size={18} className="text-yellow-400" />
+            {/* Contact Details */}
+            <motion.div variants={itemVariants} className="space-y-8">
+              <h4 className="text-sm font-black uppercase tracking-[0.2em] text-yellow-400 flex items-center gap-2">
+                <div className="w-1.5 h-1.5 rounded-full bg-yellow-400" />
+                ADDRESS FOR COMMUNICATION
+              </h4>
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                    <MapPin size={18} className="text-yellow-400" />
+                  </div>
+                  <div className="text-sm text-white/60 font-medium leading-relaxed">
+                    <p className="font-black text-white mb-1">Dr. Mahendra V. Guddad</p>
+                    <p>Department of Chemical Engineering</p>
+                    <p>Sir Visvesvaraya Institute of Technology</p>
+                    <p>At. Post: Chincholi, Tal: Sinnar, Dist: Nashik, State: Maharashtra- 422102</p>
+                  </div>
                 </div>
-                <p className="text-sm text-white/60 font-medium leading-relaxed">
-                  Chincholi, Sinnar, <br /> Nashik - 422102, MH
-                </p>
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                    <Phone size={18} className="text-yellow-400" />
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-sm font-black">+91 98813 96844</p>
+                    <p className="text-[10px] text-white/40 uppercase font-bold">Mob</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                    <Mail size={18} className="text-yellow-400" />
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-sm font-black truncate">mahendra.guddad@pravara.in</p>
+                    <p className="text-[10px] text-white/40 uppercase font-bold">Email</p>
+                  </div>
+                </div>
               </div>
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                  <Phone size={18} className="text-yellow-400" />
-                </div>
-                <div className="space-y-1">
-                  <p className="text-sm font-black">+91 98813 96844</p>
-                  <p className="text-[10px] text-white/40 uppercase font-bold">Main Coordinator</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                  <Mail size={18} className="text-yellow-400" />
-                </div>
-                <p className="text-sm font-black truncate">mahendra.guddad@pravara.in</p>
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
         </motion.div>
 
         {/* Featured Campus Card */}

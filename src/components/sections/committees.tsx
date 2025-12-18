@@ -60,57 +60,98 @@ const Committees = () => {
             />
           </motion.div>
   
-            {/* Chief Patron Section */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-16 md:mb-24"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {chiefPatrons.map((patron, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.1 }}
-                    whileHover={{ y: -8 }}
-                    className="relative group"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#0d5c2e] to-[#0a4522] rounded-[32px] translate-x-2 translate-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10" />
-                    <div className="bg-white rounded-[32px] p-8 border-2 border-[#0d5c2e]/10 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] group-hover:border-[#0d5c2e]/20 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
-                      <div className="absolute top-0 right-0 w-32 h-32 bg-[#0d5c2e]/5 rounded-bl-[100px] -mr-8 -mt-8 group-hover:bg-yellow-400/10 transition-colors duration-500" />
-                      
-                      <div className="flex items-start gap-6 relative z-10">
-                        <div className="w-16 h-16 rounded-2xl bg-[#0d5c2e] flex items-center justify-center shrink-0 shadow-lg shadow-[#0d5c2e]/20 group-hover:rotate-6 transition-transform duration-300">
-                          <ShieldCheck className="text-white w-8 h-8" />
-                        </div>
-                        <div>
-                          <h4 className="text-xl md:text-2xl font-black text-[#0d5c2e] leading-tight mb-2 group-hover:text-yellow-600 transition-colors duration-300">
-                            {patron.name}
-                          </h4>
-                          <div className="flex flex-col gap-3">
-                            <div className="flex items-start gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full bg-yellow-400 mt-2 shrink-0" />
-                              <p className="text-gray-600 font-bold text-sm leading-relaxed">
-                                {patron.designation}
-                              </p>
-                            </div>
-                            <div className="flex items-start gap-2">
-                              <div className="w-1.5 h-1.5 rounded-full bg-[#0d5c2e]/30 mt-2 shrink-0" />
-                              <p className="text-gray-500 font-medium text-xs leading-relaxed italic">
-                                {patron.organization}
-                              </p>
+              {/* Chief Patron Section */}
+              <motion.div 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="mb-16 md:mb-24"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {chiefPatrons.map((patron, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1 }}
+                      whileHover={{ y: -8 }}
+                      className="relative group"
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-[#0d5c2e] to-[#0a4522] rounded-[32px] translate-x-2 translate-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10" />
+                      <div className="bg-white rounded-[32px] p-8 border-2 border-[#0d5c2e]/10 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] group-hover:border-[#0d5c2e]/20 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#0d5c2e]/5 rounded-bl-[100px] -mr-8 -mt-8 group-hover:bg-yellow-400/10 transition-colors duration-500" />
+                        
+                        <div className="flex items-start gap-6 relative z-10">
+                          <div className="w-16 h-16 rounded-2xl bg-[#0d5c2e] flex items-center justify-center shrink-0 shadow-lg shadow-[#0d5c2e]/20 group-hover:rotate-6 transition-transform duration-300">
+                            <ShieldCheck className="text-white w-8 h-8" />
+                          </div>
+                          <div>
+                            <h4 className="text-xl md:text-2xl font-black text-[#0d5c2e] leading-tight mb-2 group-hover:text-yellow-600 transition-colors duration-300">
+                              {patron.name}
+                            </h4>
+                            <div className="flex flex-col gap-3">
+                              <div className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 rounded-full bg-yellow-400 mt-2 shrink-0" />
+                                <p className="text-gray-600 font-bold text-sm leading-relaxed">
+                                  {patron.designation}
+                                </p>
+                              </div>
+                              <div className="flex items-start gap-2">
+                                <div className="w-1.5 h-1.5 rounded-full bg-[#0d5c2e]/30 mt-2 shrink-0" />
+                                <p className="text-gray-500 font-medium text-xs leading-relaxed italic">
+                                  {patron.organization}
+                                </p>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </motion.div>
-                ))}
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Program Leadership Section */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 md:mb-24">
+                {/* Program Director */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="bg-[#f8f9fa] rounded-[32px] p-8 border border-black/5 hover:border-[#0d5c2e]/20 transition-all"
+                >
+                  <span className="text-[#0d5c2e] font-black text-[10px] tracking-widest uppercase mb-4 block">PROGRAM DIRECTOR</span>
+                  <h4 className="text-xl font-black text-[#0d5c2e] mb-2">Dr. Sarang Pande</h4>
+                  <p className="text-gray-600 text-sm font-bold">Principal, SVIT, Chincholi, Nashik</p>
+                </motion.div>
+
+                {/* Coordinator */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                  className="bg-[#f8f9fa] rounded-[32px] p-8 border border-black/5 hover:border-[#0d5c2e]/20 transition-all"
+                >
+                  <span className="text-[#0d5c2e] font-black text-[10px] tracking-widest uppercase mb-4 block">COORDINATOR</span>
+                  <h4 className="text-xl font-black text-[#0d5c2e] mb-2">Dr. Mahendra V. Guddad</h4>
+                  <p className="text-gray-600 text-sm font-bold">Department of Chemical Engineering</p>
+                </motion.div>
+
+                {/* Co-coordinator */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="bg-[#f8f9fa] rounded-[32px] p-8 border border-black/5 hover:border-[#0d5c2e]/20 transition-all"
+                >
+                  <span className="text-[#0d5c2e] font-black text-[10px] tracking-widest uppercase mb-4 block">CO-CORDINATOR</span>
+                  <h4 className="text-xl font-black text-[#0d5c2e] mb-2">Ms. Archana Hatkar</h4>
+                  <p className="text-gray-600 text-sm font-bold">Department of Electronics & Computer Engineering</p>
+                </motion.div>
               </div>
-            </motion.div>
   
             {/* Organizing Committee List */}
           <motion.div 
