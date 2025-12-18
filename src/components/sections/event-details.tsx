@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { UserCheck, Calendar, MapPin, CreditCard, Monitor } from 'lucide-react';
 
 const EventDetails: React.FC = () => {
   const resourcePersons = [
@@ -16,104 +17,127 @@ const EventDetails: React.FC = () => {
   ];
 
   return (
-    <section className="py-[80px] lg:py-[100px] bg-white" id="resource-persons">
-      <div className="container mx-auto px-[15px] max-w-[1170px]">
-        <div className="mb-12">
-          <div className="text-center">
-            <h2 className="text-[32px] md:text-[42px] font-bold font-display text-[#0d5c2e] capitalize leading-tight">
-              Resource Persons
-            </h2>
-            <p className="text-[#666] text-[16px] mt-2">Domain Experts From Reputed Institutes/Industry</p>
-          </div>
+    <section className="py-24 lg:py-32 bg-[#f8f9fa] relative overflow-hidden" id="resource-persons">
+      {/* Decorative Blur */}
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-[#0d5c2e]/5 rounded-full blur-[120px]" />
+
+      <div className="container mx-auto px-6 lg:max-w-[1280px] relative z-10">
+        
+        {/* Resource Persons Header */}
+        <div className="text-center mb-16">
+          <span className="text-[#0d5c2e] font-black tracking-[0.3em] uppercase text-xs mb-4 block">Meet Our Experts</span>
+          <h2 className="text-4xl md:text-5xl font-black text-[#0d5c2e] tracking-tighter mb-6">
+            RESOURCE <span className="text-yellow-600">PERSONS</span>
+          </h2>
+          <p className="text-gray-500 max-w-2xl mx-auto font-medium">
+            Domain experts from reputed institutes and industry leaders sharing their insights and expertise.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        {/* Resource Persons Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-24">
           {resourcePersons.map((person, index) => (
             <div 
               key={index} 
-              className="bg-[#f8f9fa] rounded-lg p-6 border-l-4 border-[#0d5c2e] hover:shadow-lg transition-shadow duration-300"
+              className="group bg-white rounded-3xl p-6 border border-black/5 hover:border-[#0d5c2e]/20 hover:shadow-2xl transition-all duration-500 relative overflow-hidden"
             >
-              <h3 className="text-[#0d5c2e] font-bold font-display text-[18px] mb-2">
+              <div className="absolute top-0 right-0 w-16 h-16 bg-[#0d5c2e]/5 rounded-bl-3xl group-hover:scale-150 transition-transform duration-500" />
+              <div className="w-12 h-12 bg-[#0d5c2e]/10 text-[#0d5c2e] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#0d5c2e] group-hover:text-white transition-all duration-500">
+                <UserCheck size={24} />
+              </div>
+              <h3 className="text-[#0d5c2e] font-black text-lg mb-2 leading-tight">
                 {person.name}
               </h3>
-              <p className="text-[#666] font-body text-[14px]">
+              <p className="text-gray-500 text-sm leading-relaxed font-medium">
                 {person.designation}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="relative max-w-[1050px] mx-auto overflow-hidden rounded-[10px] bg-[#0d5c2e] flex flex-col md:flex-row shadow-[0px_10px_30px_rgba(0,0,0,0.1)]">
-          
-          <div className="w-full md:w-[70px] bg-[#ffd700] flex items-center justify-center py-6 md:py-0">
-            <div className="md:-rotate-90 whitespace-nowrap text-center">
-              <span className="text-[#0d5c2e] font-display font-semibold text-[14px] md:text-[16px] tracking-wide inline-block px-4">
-                Chemical Engineering Department, SVIT, Nashik
+        {/* Event Quick Info Card */}
+        <div className="relative max-w-5xl mx-auto">
+          <div className="absolute inset-0 bg-yellow-400 rounded-[40px] translate-x-3 translate-y-3 -z-10 opacity-30" />
+          <div className="bg-[#0d5c2e] rounded-[40px] overflow-hidden shadow-2xl flex flex-col lg:flex-row items-stretch">
+            
+            {/* Left Accent */}
+            <div className="hidden lg:flex w-20 bg-yellow-400 items-center justify-center">
+              <span className="font-black text-[#0d5c2e] uppercase tracking-[0.5em] -rotate-90 whitespace-nowrap text-sm">
+                SVIT NASHIK • FDP 2026
               </span>
             </div>
-          </div>
 
-          <div className="flex-1 p-[30px] md:p-[50px] flex flex-col md:flex-row gap-8 items-center md:items-start">
-            
-            <div className="flex-1 space-y-6">
-              <div className="inline-block bg-[#ffd700] px-5 py-2 rounded-md">
-                <span className="text-[#0d5c2e] font-bold font-display text-[18px]">
-                  Registration Fee: No Charges
-                </span>
+            {/* Main Content */}
+            <div className="flex-1 p-10 md:p-16 text-white">
+              <div className="flex flex-wrap gap-4 mb-8">
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+                  <CreditCard size={18} className="text-yellow-400" />
+                  <span className="text-xs font-black uppercase tracking-widest">Registration: FREE</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+                  <Calendar size={18} className="text-yellow-400" />
+                  <span className="text-xs font-black uppercase tracking-widest">5-10 Jan 2026</span>
+                </div>
               </div>
 
-              <h3 className="text-white font-display font-bold text-[20px] md:text-[22px] leading-[1.4]">
-                Faculty Development Programme On &quot;Energy, Sustainability and Climate Change&quot; Sponsored by AICTE Training and Learning (ATAL) Academy
+              <h3 className="text-2xl md:text-3xl font-black mb-10 leading-tight">
+                Energy, Sustainability and Climate Change <br />
+                <span className="text-yellow-400/80 text-lg font-bold block mt-2 opacity-80 uppercase tracking-widest">AICTE-ATAL Sponsored FDP</span>
               </h3>
 
-              <div className="inline-block bg-white/10 border border-[#ffd700] px-6 py-2 rounded-full">
-                <span className="text-[#ffd700] font-bold font-display text-[16px]">
-                  5th - 10th January, 2026
-                </span>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
-                <div>
-                  <h4 className="text-[#ffd700] font-bold font-display text-[20px] mb-2">
-                    Mode Of Event
-                  </h4>
-                  <p className="text-white font-body text-[16px] m-0 text-left">
-                    Online
-                  </p>
+              <div className="grid sm:grid-cols-2 gap-8 mb-10">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Monitor size={20} className="text-yellow-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-black text-yellow-400 uppercase text-xs tracking-widest mb-1">Mode</h4>
+                      <p className="font-bold">Online (Link via Email)</p>
+                    </div>
+                  </div>
                 </div>
-
-                <div>
-                  <h4 className="text-[#ffd700] font-bold font-display text-[20px] mb-2">
-                    Venue
-                  </h4>
-                  <p className="text-white font-body text-[14px] md:text-[15px] leading-relaxed m-0 text-left">
-                    SVIT, Chincholi, Sinnar, Nashik
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex-shrink-0 flex items-center justify-center">
-              <div className="relative p-6 bg-[#0a4a24] rounded-[15px] border border-white/5 group">
-                <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-white/40"></div>
-                <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-white/40"></div>
-                <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-white/40"></div>
-                <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-white/40"></div>
-                
-                <div className="bg-white p-3 rounded-md">
-                  <div className="w-[120px] h-[120px] md:w-[150px] md:h-[150px] flex items-center justify-center bg-white">
-                    <Image 
-                      src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://atalacademy.aicte-india.org/login" 
-                      alt="Registration QR Code"
-                      width={150}
-                      height={150}
-                      className="object-contain grayscale contrast-125"
-                    />
+                <div className="space-y-4">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <MapPin size={20} className="text-yellow-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-black text-yellow-400 uppercase text-xs tracking-widest mb-1">Venue</h4>
+                      <p className="font-bold">SVIT, Chincholi, Sinnar, Nashik</p>
+                    </div>
                   </div>
                 </div>
               </div>
+
+              <a 
+                href="https://atalacademy.aicte-india.org/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-yellow-400 text-[#0d5c2e] font-black px-10 py-5 rounded-2xl hover:scale-105 transition-all shadow-xl"
+              >
+                <span>SECURE YOUR SPOT</span>
+                <div className="w-6 h-6 bg-[#0d5c2e] text-white rounded-full flex items-center justify-center">
+                  <span className="text-xs">→</span>
+                </div>
+              </a>
             </div>
 
+            {/* QR Section */}
+            <div className="bg-white/5 backdrop-blur-2xl p-10 lg:w-80 flex flex-col items-center justify-center border-l border-white/10">
+              <div className="bg-white p-4 rounded-3xl shadow-2xl mb-6 group hover:scale-110 transition-transform duration-500">
+                <Image 
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://atalacademy.aicte-india.org/login" 
+                  alt="QR Code"
+                  width={150}
+                  height={150}
+                  className="grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+              <p className="text-[10px] font-black text-white/40 uppercase tracking-[0.2em] text-center">
+                Scan to Register <br /> on ATAL Portal
+              </p>
+            </div>
           </div>
         </div>
       </div>

@@ -10,138 +10,149 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
+      setIsSticky(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
     { name: "Home", href: "#home" },
-    { name: "About Us", href: "#about" },
-    { name: "Important Dates", href: "#dates" },
+    { name: "About", href: "#about" },
+    { name: "Dates", href: "#dates" },
     { name: "Committees", href: "#committes" },
-    { name: "Resource Persons", href: "#resource-persons" },
-    { name: "Contact Us", href: "#contact" },
+    { name: "Speakers", href: "#resource-persons" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
     <>
-      <header className="homepage2-menu w-full relative z-[100]">
-        <div
-          id="vl-header-sticky"
-          className={`vl-header-area fixed top-0 left-0 w-full transition-all duration-300 ${
-            isSticky 
-              ? "bg-[#0d5c2e] shadow-md h-[79px]" 
-              : "bg-[#0d5c2e]/90 lg:bg-[#0d5c2e]/80 h-[79px] lg:h-[89px]"
-          }`}
-        >
-          <div className="container mx-auto max-w-[1320px] px-3 h-full flex items-center">
-            <div className="w-full flex items-center justify-between lg:justify-start bg-transparent py-4 lg:py-0 border-none">
-              
-              <div className="flex-shrink-0 w-[164px] lg:w-[220px]">
-                <div className="vl-logo">
-                  <a href="#home" className="block">
-                    <span className="text-white font-bold text-[16px] lg:text-[18px]">SVIT, Chincholi</span>
-                  </a>
-                </div>
+      <header 
+        className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 ${
+          isSticky 
+            ? "bg-[#0d5c2e]/95 backdrop-blur-lg shadow-2xl py-3" 
+            : "bg-transparent py-6"
+        }`}
+      >
+        <div className="container mx-auto px-6 lg:max-w-[1280px]">
+          <div className="flex items-center justify-between">
+            
+            {/* Logo Section */}
+            <a href="#home" className="flex items-center gap-3 group">
+              <div className="bg-white p-1.5 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <Image 
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/PRES_Logo.png/220px-PRES_Logo.png"
+                  alt="SVIT"
+                  width={40}
+                  height={40}
+                  className="h-10 w-auto"
+                />
               </div>
-
-              <div className="hidden lg:block flex-grow px-3">
-                <nav className="vl-main-menu text-center">
-                  <ul className="flex justify-center items-center space-x-0">
-                    {navLinks.map((link) => (
-                      <li key={link.name} className="relative group">
-                        <a
-                          href={link.href}
-                          className="inline-block px-4 py-2 text-[16px] font-medium font-display text-white transition-colors duration-300 hover:text-[#ffd700] whitespace-nowrap"
-                        >
-                          {link.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </nav>
+              <div className="flex flex-col">
+                <span className="text-white font-black text-xl leading-none tracking-tighter">SVIT NASHIK</span>
+                <span className="text-yellow-400 font-bold text-[10px] tracking-widest uppercase opacity-80">ATAL FDP 2026</span>
               </div>
+            </a>
 
-              <div className="flex items-center lg:w-[330px] justify-end space-x-4">
-                <div className="hidden lg:block">
-                  <div className="btn-area1">
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:block">
+              <ul className="flex items-center gap-2">
+                {navLinks.map((link) => (
+                  <li key={link.name}>
                     <a
-                      href="https://atalacademy.aicte-india.org/login"
-                      className="vl-btn2 inline-block bg-[#ffd700] text-[#0d5c2e] text-[18px] font-semibold font-display px-[20px] py-[14px] rounded-[8px] transition-all duration-300 hover:bg-[#ffed4a] hover:-translate-y-0.5 text-center min-w-[143px]"
+                      href={link.href}
+                      className="px-4 py-2 text-sm font-bold text-white/80 hover:text-white hover:bg-white/10 rounded-xl transition-all duration-300 uppercase tracking-wider"
                     >
-                      Registration
+                      {link.name}
                     </a>
-                  </div>
-                </div>
+                  </li>
+                ))}
+              </ul>
+            </nav>
 
-                <button
-                  onClick={() => setIsMobileMenuOpen(true)}
-                  className="lg:hidden text-white p-2"
-                  aria-label="Open Menu"
-                >
-                  <Menu size={28} />
-                </button>
-              </div>
+            {/* Registration Button & Mobile Toggle */}
+            <div className="flex items-center gap-4">
+              <a
+                href="https://atalacademy.aicte-india.org/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:flex px-6 py-2.5 bg-yellow-400 text-[#0d5c2e] text-sm font-black rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(250,204,21,0.3)] uppercase tracking-wider"
+              >
+                Register
+              </a>
+              <button
+                onClick={() => setIsMobileMenuOpen(true)}
+                className="lg:hidden text-white p-2 hover:bg-white/10 rounded-xl transition-colors"
+                aria-label="Open Menu"
+              >
+                <Menu size={28} />
+              </button>
             </div>
           </div>
         </div>
       </header>
 
+      {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-black/50 z-[1000] transition-opacity duration-300 ${
+        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[1000] transition-opacity duration-500 ${
           isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
         onClick={() => setIsMobileMenuOpen(false)}
       />
 
+      {/* Mobile Menu Drawer */}
       <div
-        className={`fixed top-0 right-0 w-[300px] h-full bg-[#0d5c2e] z-[1001] transition-transform duration-300 ease-in-out transform ${
+        className={`fixed top-0 right-0 w-[320px] h-full bg-[#0d5c2e] z-[1001] transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1) transform ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        } shadow-[-20px_0_40px_rgba(0,0,0,0.3)]`}
       >
         <div className="p-8 h-full flex flex-col">
-          <div className="flex justify-between items-center mb-10">
-            <div className="vl-logo">
-              <span className="text-white font-bold text-[16px]">SVIT, Chincholi</span>
+          <div className="flex justify-between items-center mb-12">
+            <div className="flex items-center gap-3">
+              <div className="bg-white p-1 rounded-lg">
+                <Image 
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/PRES_Logo.png/220px-PRES_Logo.png"
+                  alt="SVIT"
+                  width={30}
+                  height={30}
+                />
+              </div>
+              <span className="text-white font-black text-lg tracking-tighter">SVIT NASHIK</span>
             </div>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-white hover:text-[#ffd700] transition-colors"
+              className="text-white/60 hover:text-white p-2 hover:bg-white/10 rounded-xl transition-all"
             >
               <X size={28} />
             </button>
           </div>
 
           <nav className="flex-grow">
-            <ul className="space-y-4">
+            <ul className="space-y-2">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block text-[18px] font-medium text-white hover:text-[#ffd700] transition-colors py-2 border-b border-white/10"
+                    className="flex items-center px-4 py-4 text-xl font-bold text-white/80 hover:text-white hover:bg-white/10 rounded-2xl transition-all duration-300 group"
                   >
-                    {link.name}
+                    <span className="group-hover:translate-x-2 transition-transform duration-300 uppercase tracking-widest">{link.name}</span>
                   </a>
                 </li>
               ))}
-              <li className="pt-4">
-                <a
-                  href="https://atalacademy.aicte-india.org/login"
-                  className="block text-center bg-[#ffd700] text-[#0d5c2e] text-[18px] font-semibold py-3 rounded-[8px]"
-                >
-                  Registration
-                </a>
-              </li>
             </ul>
           </nav>
+
+          <div className="pt-8 mt-auto border-t border-white/10">
+            <a
+              href="https://atalacademy.aicte-india.org/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex justify-center items-center w-full bg-yellow-400 text-[#0d5c2e] text-lg font-black py-5 rounded-2xl shadow-xl transition-all active:scale-95 uppercase tracking-widest"
+            >
+              Register Now
+            </a>
+          </div>
         </div>
       </div>
     </>

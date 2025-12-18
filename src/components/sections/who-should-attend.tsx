@@ -1,45 +1,81 @@
 import React from 'react';
+import { Users, Award, Zap } from 'lucide-react';
 
 const WhoShouldAttend = () => {
   return (
     <section 
       id="who-should-attend" 
-      className="bg-[#0d5c2e] text-white py-[60px] lg:py-[80px]"
+      className="bg-white py-24 lg:py-32 relative overflow-hidden"
     >
-      <div className="container mx-auto px-[15px] max-w-[1170px]">
-        <div className="grid md:grid-cols-2 gap-8">
-          
-          <div className="bg-white/10 rounded-lg p-8 border border-white/20">
-            <h2 className="text-[24px] md:text-[28px] font-bold font-display mb-6 tracking-tight leading-tight border-b-2 border-[#ffd700] pb-3 inline-block">
-              Perspective Participants
-            </h2>
-            <p className="text-[16px] font-body text-white/90 leading-[1.8]">
-              This FDP is open for participants of academicians, research Scholars from AICTE approved Institutions and Central Government institutions.
-            </p>
-          </div>
-
-          <div className="bg-white/10 rounded-lg p-8 border border-white/20">
-            <h2 className="text-[24px] md:text-[28px] font-bold font-display mb-6 tracking-tight leading-tight border-b-2 border-[#ffd700] pb-3 inline-block">
-              Certificate
-            </h2>
-            <p className="text-[16px] font-body text-white/90 leading-[1.8]">
-              Certificate shall be issued to the participants who have attended the program with minimum 80% attendance and scored minimum 60% marks in the test. The participants also have to provide compulsory online feedback on the last day of FDP.
-            </p>
-          </div>
-
-        </div>
-
-        <div className="mt-10 bg-white/10 rounded-lg p-8 border border-white/20">
-          <h2 className="text-[24px] md:text-[28px] font-bold font-display mb-6 tracking-tight leading-tight border-b-2 border-[#ffd700] pb-3 inline-block">
-            Key Points
+      <div className="container relative z-10 mx-auto px-6 lg:max-w-[1280px]">
+        
+        <div className="text-center mb-16">
+          <span className="text-[#0d5c2e] font-black tracking-[0.3em] uppercase text-xs mb-4 block">Participation Guide</span>
+          <h2 className="text-4xl md:text-5xl font-black text-[#0d5c2e] tracking-tighter mb-4">
+            WHO SHOULD <span className="text-yellow-600">ATTEND?</span>
           </h2>
-          <ul className="text-[16px] font-body text-white/90 leading-[1.8] space-y-3 list-disc list-inside">
-            <li>There is no registration fee for any participants</li>
-            <li>Participants will be selected on a first-come, first-served basis</li>
-            <li>Selected candidates will be intimated by email</li>
-            <li>Registration is mandatory for attending the FDP</li>
-          </ul>
+          <div className="w-24 h-1.5 bg-yellow-400 mx-auto rounded-full" />
         </div>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          
+          {/* Eligibility Card */}
+          <div className="group p-10 bg-[#f8f9fa] rounded-[40px] border border-black/5 hover:bg-white hover:shadow-2xl transition-all duration-500 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-24 h-24 bg-[#0d5c2e]/5 rounded-bl-full group-hover:scale-150 transition-transform duration-700" />
+            <div className="w-14 h-14 bg-[#0d5c2e] text-white rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+              <Users size={28} />
+            </div>
+            <h3 className="text-2xl font-black text-[#0d5c2e] mb-4">Perspective Participants</h3>
+            <p className="text-gray-600 leading-relaxed font-medium">
+              This FDP is open for academicians, research scholars from AICTE approved institutions, and Central Government organizations committed to sustainability.
+            </p>
+          </div>
+
+          {/* Certificate Card */}
+          <div className="group p-10 bg-[#f8f9fa] rounded-[40px] border border-black/5 hover:bg-white hover:shadow-2xl transition-all duration-500 relative overflow-hidden shadow-sm">
+            <div className="absolute top-0 right-0 w-24 h-24 bg-yellow-400/5 rounded-bl-full group-hover:scale-150 transition-transform duration-700" />
+            <div className="w-14 h-14 bg-yellow-400 text-[#0d5c2e] rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+              <Award size={28} />
+            </div>
+            <h3 className="text-2xl font-black text-[#0d5c2e] mb-4">Certificate Criteria</h3>
+            <p className="text-gray-600 leading-relaxed font-medium">
+              Awarded to participants with min. 80% attendance and 60% marks in the final test. Online feedback is mandatory on the concluding day.
+            </p>
+          </div>
+
+        </div>
+
+        {/* Key Points Horizontal Card */}
+        <div className="bg-[#0d5c2e] rounded-[40px] p-10 md:p-12 text-white relative overflow-hidden group">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl group-hover:scale-110 transition-transform duration-1000" />
+          
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="lg:w-1/3 text-center lg:text-left">
+              <div className="w-16 h-16 bg-yellow-400 text-[#0d5c2e] rounded-2xl flex items-center justify-center mb-6 mx-auto lg:mx-0">
+                <Zap size={32} />
+              </div>
+              <h3 className="text-3xl font-black mb-4">Quick <span className="text-yellow-400">Highlights</span></h3>
+              <p className="text-white/70 font-medium">Essential information for your smooth registration process.</p>
+            </div>
+            
+            <div className="lg:w-2/3 grid sm:grid-cols-2 gap-6">
+              {[
+                "Zero registration fee for all participants",
+                "First-come, first-served selection basis",
+                "Mandatory registration via ATAL portal",
+                "Intimation of selection via official email"
+              ].map((point, i) => (
+                <div key={i} className="flex gap-4 items-center bg-white/5 backdrop-blur-md p-5 rounded-2xl border border-white/10">
+                  <div className="w-8 h-8 rounded-full bg-yellow-400 text-[#0d5c2e] flex items-center justify-center font-black text-xs flex-shrink-0">
+                    {i + 1}
+                  </div>
+                  <span className="font-bold text-sm leading-tight">{point}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
