@@ -7,10 +7,10 @@ const HeroSection = () => {
   const INSTITUTE_IMAGE = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image-1766039634850.png?width=8000&height=8000&resize=contain";
 
   return (
-      <section 
-        id="home"
-        className="relative min-h-screen flex items-center pt-40 lg:pt-48 pb-20 overflow-hidden scroll-mt-32"
-      >
+        <section 
+          id="home"
+          className="relative min-h-screen flex items-center pt-32 lg:pt-36 pb-20 overflow-hidden scroll-mt-32"
+        >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image 
