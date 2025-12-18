@@ -67,16 +67,6 @@ const Committees = () => {
               viewport={{ once: true }}
               className="mb-16 md:mb-24"
             >
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
-                <div className="relative">
-                  <span className="text-yellow-600 font-bold tracking-widest uppercase text-[10px] mb-2 block">Our Visionary Leadership</span>
-                  <h3 className="text-3xl md:text-4xl font-black text-[#0d5c2e] flex items-center gap-4">
-                    CHIEF <span className="text-yellow-600">PATRON</span>
-                  </h3>
-                </div>
-                <div className="h-0.5 flex-grow bg-gradient-to-r from-yellow-400/50 to-transparent mx-8 hidden lg:block" />
-              </div>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {chiefPatrons.map((patron, i) => (
                   <motion.div
