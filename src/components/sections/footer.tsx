@@ -22,7 +22,7 @@ import {
 
 const Footer = () => {
   const INSTITUTE_IMAGE = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image-1766039634850.png?width=8000&height=8000&resize=contain";
-  const PRES_LOGO = "https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/PRES_Logo.png/220px-PRES_Logo.png";
+  const PRES_LOGO = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/PRAVARA_LOGO-1766039988502.png?width=8000&height=8000&resize=contain";
 
   const quickLinks = [
     { name: 'Home', href: '#home' },
