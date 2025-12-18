@@ -63,7 +63,7 @@ const HeroSection = () => {
   return (
     <section 
       id="home"
-      className="relative min-h-[110vh] flex items-center pt-24 lg:pt-32 pb-20 overflow-hidden scroll-mt-32"
+      className="relative min-h-[105vh] flex items-center pt-24 lg:pt-32 pb-20 overflow-hidden scroll-mt-32"
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
@@ -178,7 +178,7 @@ const HeroSection = () => {
                 transition={{ duration: 1, delay: 0.5, type: "spring" }}
                 className="bg-white/10 backdrop-blur-2xl border border-white/20 p-8 rounded-[40px] shadow-2xl relative group"
               >
-                <div className="absolute -inset-0.5 bg-gradient-to-br from-yellow-400 to-transparent rounded-[40px] opacity-20 blur-sm group-hover:opacity-40 transition-opacity" />
+                <div className="absolute -inset-0.5 bg-gradient-to-br from-white/30 to-transparent rounded-[40px] opacity-20 blur-sm group-hover:opacity-40 transition-opacity" />
                 <div className="relative">
                   <div className="bg-white p-5 rounded-3xl shadow-xl mb-6 flex justify-center">
                     <Image 
@@ -190,12 +190,12 @@ const HeroSection = () => {
                     />
                   </div>
                   <div className="text-center space-y-3">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-yellow-400">Founded by</p>
+                    <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-white/60">Founded by</p>
                     <p className="text-xs italic font-semibold leading-relaxed">
                       Loknete Dr. Balasaheb Vikhe Patil <br />
-                      <span className="text-[9px] uppercase font-black not-italic px-2 py-0.5 bg-yellow-400 text-[#0d5c2e] rounded-sm">(Padma Bhushan Awardee)</span>
+                      <span className="text-[9px] uppercase font-black not-italic px-2 py-0.5 bg-white/20 text-white rounded-sm">(Padma Bhushan Awardee)</span>
                     </p>
-                    <div className="w-12 h-1 bg-yellow-400 mx-auto rounded-full" />
+                    <div className="w-12 h-1 bg-white/20 mx-auto rounded-full" />
                     <p className="text-lg font-black leading-tight">
                       SIR VISVESVARAYA <br />
                       INSTITUTE OF TECHNOLOGY, <br />

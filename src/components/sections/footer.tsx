@@ -81,10 +81,10 @@ const Footer = () => {
                   className="object-contain p-1"
                 />
               </div>
-              <div>
-                <h3 className="text-xl font-black leading-none tracking-tighter">SVIT <span className="text-yellow-400">NASHIK</span></h3>
-                <p className="text-[10px] uppercase tracking-[0.2em] text-white/40 mt-1 font-bold">Pravara Education</p>
-              </div>
+                <div>
+                  <h3 className="text-xl font-black leading-none tracking-tighter text-white">SVIT NASHIK</h3>
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-white/40 mt-1 font-bold">Pravara Education</p>
+                </div>
             </div>
             
             <p className="text-white/60 text-sm leading-relaxed font-medium">
