@@ -9,6 +9,57 @@ const HeroSection = () => {
   const LOGO_ATAL = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/68ec921c-43a1-4e43-aa69-d9b676eb63ee-sitrc-sandipfoundation-org/assets/images/l1-2.png";
   const INSTITUTE_IMAGE = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image-1766039634850.png?width=8000&height=8000&resize=contain";
 
+  const LetterPull = ({ text, className, delay = 0 }: { text: string; className?: string; delay?: number }) => {
+    const letters = Array.from(text);
+    
+    const container = {
+      hidden: { opacity: 0 },
+      visible: {
+        opacity: 1,
+        transition: { 
+          staggerChildren: 0.03, 
+          delayChildren: delay 
+        },
+      },
+    };
+
+    const child = {
+      visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+          type: "spring",
+          damping: 12,
+          stiffness: 200,
+        },
+      },
+      hidden: {
+        opacity: 0,
+        x: -20,
+      },
+    };
+
+    return (
+      <motion.span
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        className={className}
+        style={{ display: "inline-block" }}
+      >
+        {letters.map((letter, index) => (
+          <motion.span
+            key={index}
+            variants={child}
+            style={{ display: "inline-block", whiteSpace: "pre" }}
+          >
+            {letter}
+          </motion.span>
+        ))}
+      </motion.span>
+    );
+  };
+
   return (
     <section 
       id="home"
@@ -59,21 +110,25 @@ const HeroSection = () => {
                   </div>
                 </motion.div>
 
-              <motion.div 
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="space-y-2 mb-6"
-              >
-                <span className="inline-block px-3 py-1 rounded-full bg-yellow-400/20 border border-yellow-400/30 text-yellow-400 text-[11px] font-bold tracking-wider uppercase mb-1">
-                  Faculty Development Program
-                </span>
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.85] tracking-tighter">
-                  ENERGY,<br />
-                  <span className="text-yellow-400 drop-shadow-[0_0_15px_rgba(250,204,21,0.3)]">SUSTAINABILITY</span><br />
-                  & CLIMATE CHANGE
-                </h1>
-              </motion.div>
+                <motion.div 
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="space-y-2 mb-6"
+                >
+                  <span className="inline-block px-3 py-1 rounded-full bg-yellow-400/20 border border-yellow-400/30 text-yellow-400 text-[11px] font-bold tracking-wider uppercase mb-1">
+                    Faculty Development Program
+                  </span>
+                  <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.85] tracking-tighter">
+                    <LetterPull text="ENERGY," delay={0.4} /><br />
+                    <LetterPull 
+                      text="SUSTAINABILITY" 
+                      delay={0.7}
+                      className="text-yellow-400 drop-shadow-[0_0_15px_rgba(250,204,21,0.3)]" 
+                    /><br />
+                    <LetterPull text="& CLIMATE CHANGE" delay={1.2} />
+                  </h1>
+                </motion.div>
 
               <motion.div 
                 initial={{ opacity: 0 }}
