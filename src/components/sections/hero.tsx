@@ -65,7 +65,7 @@ const HeroSection = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
+            <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500">
               <a 
                 href="https://atalacademy.aicte-india.org/login" 
                 target="_blank" 
@@ -87,15 +87,15 @@ const HeroSection = () => {
           {/* Right Content - Branding Card */}
           <div className="lg:col-span-4 hidden lg:block animate-in fade-in zoom-in duration-1000 delay-400">
             <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-8 rounded-[40px] shadow-2xl">
-              <div className="bg-white p-6 rounded-3xl shadow-xl mb-8 flex justify-center">
-                <Image 
-                  src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/PRES_Logo.png/220px-PRES_Logo.png"
-                  alt="Pravara Logo"
-                  width={150}
-                  height={150}
-                  className="object-contain hover:scale-110 transition-transform duration-500"
-                />
-              </div>
+                <div className="bg-white p-6 rounded-3xl shadow-xl mb-8 flex justify-center">
+                  <Image 
+                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/PRAVARA_LOGO-1766039988502.png?width=8000&height=8000&resize=contain"
+                    alt="Pravara Logo"
+                    width={150}
+                    height={150}
+                    className="object-contain hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
               <div className="text-center space-y-4">
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-yellow-400">Founded by</p>
                 <p className="text-sm italic font-medium leading-relaxed">

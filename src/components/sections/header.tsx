@@ -40,13 +40,13 @@ const Header = () => {
             {/* Logo Section */}
             <a href="#home" className="flex items-center gap-3 group">
               <div className="bg-white p-1.5 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <Image 
-                  src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/PRES_Logo.png/220px-PRES_Logo.png"
-                  alt="SVIT"
-                  width={40}
-                  height={40}
-                  className="h-10 w-auto"
-                />
+                  <Image 
+                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/PRAVARA_LOGO-1766039988502.png?width=8000&height=8000&resize=contain"
+                    alt="SVIT"
+                    width={40}
+                    height={40}
+                    className="h-10 w-auto"
+                  />
               </div>
               <div className="flex flex-col">
                 <span className="text-white font-black text-xl leading-none tracking-tighter">SVIT NASHIK</span>
@@ -109,14 +109,14 @@ const Header = () => {
         <div className="p-8 h-full flex flex-col">
           <div className="flex justify-between items-center mb-12">
             <div className="flex items-center gap-3">
-              <div className="bg-white p-1 rounded-lg">
-                <Image 
-                  src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/PRES_Logo.png/220px-PRES_Logo.png"
-                  alt="SVIT"
-                  width={30}
-                  height={30}
-                />
-              </div>
+                <div className="bg-white p-1 rounded-lg">
+                  <Image 
+                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/PRAVARA_LOGO-1766039988502.png?width=8000&height=8000&resize=contain"
+                    alt="SVIT"
+                    width={30}
+                    height={30}
+                  />
+                </div>
               <span className="text-white font-black text-lg tracking-tighter">SVIT NASHIK</span>
             </div>
             <button
