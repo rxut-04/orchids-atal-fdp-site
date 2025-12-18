@@ -49,7 +49,7 @@ const Committees = () => {
           >
             <span className="text-[#0d5c2e] font-black tracking-[0.3em] uppercase text-xs mb-4 block">Leadership & Management</span>
             <h2 className="text-3xl md:text-5xl font-black text-[#0d5c2e] tracking-tighter mb-4">
-              ORGANIZING <span className="text-yellow-600">COMMITTEE</span>
+              CHIEF <span className="text-yellow-600">PATRON</span>
             </h2>
             <motion.div 
               initial={{ width: 0 }}
