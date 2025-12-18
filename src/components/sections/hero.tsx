@@ -90,12 +90,12 @@ const HeroSection = () => {
             
                 {/* Left Content */}
                 <div className="lg:col-span-8 text-white pr-4">
-                <motion.div 
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8 }}
-                  className="flex flex-wrap items-center gap-6 mb-8"
-                >
+                  <motion.div 
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="flex flex-wrap items-center gap-6 mb-16"
+                  >
                   <div className="flex items-center gap-4">
                     <div className="bg-white/10 backdrop-blur-md p-2 rounded-2xl border border-white/20">
                       <Image src={LOGO_AICTE} alt="AICTE" width={44} height={44} className="h-11 w-auto object-contain" />
