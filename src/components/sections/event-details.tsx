@@ -17,38 +17,38 @@ const EventDetails: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 lg:py-32 bg-[#f8f9fa] relative overflow-hidden scroll-mt-32" id="resource-persons">
+    <section className="py-16 md:py-24 lg:py-32 bg-[#f8f9fa] relative overflow-hidden scroll-mt-32" id="resource-persons">
       {/* Decorative Blur */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-[#0d5c2e]/5 rounded-full blur-[120px]" />
 
       <div className="container mx-auto px-6 lg:max-w-[1280px] relative z-10">
         
         {/* Resource Persons Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <span className="text-[#0d5c2e] font-black tracking-[0.3em] uppercase text-xs mb-4 block">Meet Our Experts</span>
-          <h2 className="text-4xl md:text-5xl font-black text-[#0d5c2e] tracking-tighter mb-6">
+          <h2 className="text-3xl md:text-5xl font-black text-[#0d5c2e] tracking-tighter mb-6">
             RESOURCE <span className="text-yellow-600">PERSONS</span>
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto font-medium">
+          <p className="text-gray-500 max-w-2xl mx-auto font-medium text-sm md:text-base px-4">
             Domain experts from reputed institutes and industry leaders sharing their insights and expertise.
           </p>
         </div>
 
         {/* Resource Persons Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 mb-16 md:mb-24">
           {resourcePersons.map((person, index) => (
             <div 
               key={index} 
               className="group bg-white rounded-3xl p-6 border border-black/5 hover:border-[#0d5c2e]/20 hover:shadow-2xl transition-all duration-500 relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-16 h-16 bg-[#0d5c2e]/5 rounded-bl-3xl group-hover:scale-150 transition-transform duration-500" />
-              <div className="w-12 h-12 bg-[#0d5c2e]/10 text-[#0d5c2e] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#0d5c2e] group-hover:text-white transition-all duration-500">
-                <UserCheck size={24} />
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-[#0d5c2e]/10 text-[#0d5c2e] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#0d5c2e] group-hover:text-white transition-all duration-500">
+                <UserCheck size={20} className="md:w-[24px] md:h-[24px]" />
               </div>
-              <h3 className="text-[#0d5c2e] font-black text-lg mb-2 leading-tight">
+              <h3 className="text-[#0d5c2e] font-black text-base md:text-lg mb-2 leading-tight">
                 {person.name}
               </h3>
-              <p className="text-gray-500 text-sm leading-relaxed font-medium">
+              <p className="text-gray-500 text-xs md:text-sm leading-relaxed font-medium">
                 {person.designation}
               </p>
             </div>
@@ -57,7 +57,7 @@ const EventDetails: React.FC = () => {
 
         {/* Event Quick Info Card */}
         <div className="relative max-w-5xl mx-auto">
-          <div className="absolute inset-0 bg-yellow-400 rounded-[40px] translate-x-3 translate-y-3 -z-10 opacity-30" />
+          <div className="absolute inset-0 bg-yellow-400 rounded-[40px] translate-x-2 translate-y-2 md:translate-x-3 md:translate-y-3 -z-10 opacity-30" />
           <div className="bg-[#0d5c2e] rounded-[40px] overflow-hidden shadow-2xl flex flex-col lg:flex-row items-stretch">
             
             {/* Left Accent */}
@@ -68,21 +68,21 @@ const EventDetails: React.FC = () => {
             </div>
 
             {/* Main Content */}
-            <div className="flex-1 p-10 md:p-16 text-white">
-              <div className="flex flex-wrap gap-4 mb-8">
+            <div className="flex-1 p-8 md:p-16 text-white">
+              <div className="flex flex-wrap gap-3 mb-8">
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
-                  <CreditCard size={18} className="text-yellow-400" />
-                  <span className="text-xs font-black uppercase tracking-widest">Registration: FREE</span>
+                  <CreditCard size={16} className="text-yellow-400" />
+                  <span className="text-[10px] md:text-xs font-black uppercase tracking-widest">Registration: FREE</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
-                  <Calendar size={18} className="text-yellow-400" />
-                  <span className="text-xs font-black uppercase tracking-widest">5-10 Jan 2026</span>
+                  <Calendar size={16} className="text-yellow-400" />
+                  <span className="text-[10px] md:text-xs font-black uppercase tracking-widest">5-10 Jan 2026</span>
                 </div>
               </div>
 
               <h3 className="text-2xl md:text-3xl font-black mb-10 leading-tight">
                 Energy, Sustainability and Climate Change <br />
-                <span className="text-yellow-400/80 text-lg font-bold block mt-2 opacity-80 uppercase tracking-widest">AICTE-ATAL Sponsored FDP</span>
+                <span className="text-yellow-400/80 text-base md:text-lg font-bold block mt-3 opacity-80 uppercase tracking-widest">AICTE-ATAL Sponsored FDP</span>
               </h3>
 
               <div className="grid sm:grid-cols-2 gap-8 mb-10">
@@ -92,8 +92,8 @@ const EventDetails: React.FC = () => {
                       <Monitor size={20} className="text-yellow-400" />
                     </div>
                     <div>
-                      <h4 className="font-black text-yellow-400 uppercase text-xs tracking-widest mb-1">Mode</h4>
-                      <p className="font-bold">Online (Link via Email)</p>
+                      <h4 className="font-black text-yellow-400 uppercase text-[10px] tracking-widest mb-1">Mode</h4>
+                      <p className="font-bold text-sm md:text-base">Online (Link via Email)</p>
                     </div>
                   </div>
                 </div>
@@ -103,8 +103,8 @@ const EventDetails: React.FC = () => {
                       <MapPin size={20} className="text-yellow-400" />
                     </div>
                     <div>
-                      <h4 className="font-black text-yellow-400 uppercase text-xs tracking-widest mb-1">Venue</h4>
-                      <p className="font-bold">SVIT, Chincholi, Sinnar, Nashik</p>
+                      <h4 className="font-black text-yellow-400 uppercase text-[10px] tracking-widest mb-1">Venue</h4>
+                      <p className="font-bold text-sm md:text-base">SVIT, Chincholi, Sinnar, Nashik</p>
                     </div>
                   </div>
                 </div>
@@ -114,9 +114,9 @@ const EventDetails: React.FC = () => {
                 href="https://atalacademy.aicte-india.org/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-yellow-400 text-[#0d5c2e] font-black px-10 py-5 rounded-2xl hover:scale-105 transition-all shadow-xl"
+                className="inline-flex items-center gap-3 bg-yellow-400 text-[#0d5c2e] font-black px-8 md:px-10 py-4 md:py-5 rounded-2xl hover:scale-105 transition-all shadow-xl w-full sm:w-auto justify-center"
               >
-                <span>SECURE YOUR SPOT</span>
+                <span className="text-sm md:text-base">SECURE YOUR SPOT</span>
                 <div className="w-6 h-6 bg-[#0d5c2e] text-white rounded-full flex items-center justify-center">
                   <span className="text-xs">→</span>
                 </div>
@@ -124,14 +124,14 @@ const EventDetails: React.FC = () => {
             </div>
 
             {/* QR Section */}
-            <div className="bg-white/5 backdrop-blur-2xl p-10 lg:w-80 flex flex-col items-center justify-center border-l border-white/10">
+            <div className="bg-white/5 backdrop-blur-2xl p-8 md:p-10 lg:w-80 flex flex-col items-center justify-center border-t lg:border-t-0 lg:border-l border-white/10">
               <div className="bg-white p-4 rounded-3xl shadow-2xl mb-6 group hover:scale-110 transition-transform duration-500">
                 <Image 
                   src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://atalacademy.aicte-india.org/login" 
                   alt="QR Code"
-                  width={150}
-                  height={150}
-                  className="grayscale hover:grayscale-0 transition-all duration-500"
+                  width={120}
+                  height={120}
+                  className="grayscale hover:grayscale-0 transition-all duration-500 md:w-[150px] md:h-[150px]"
                 />
               </div>
               <p className="text-[10px] font-black text-white/40 uppercase tracking-[0.2em] text-center">

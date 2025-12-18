@@ -3,10 +3,10 @@ import { Calendar, Clock } from 'lucide-react';
 
 const ImportantDates = () => {
   return (
-      <section 
-        id="dates" 
-        className="relative py-24 lg:py-32 bg-[#0d5c2e] overflow-hidden scroll-mt-32"
-      >
+    <section 
+      id="dates" 
+      className="relative py-16 md:py-24 lg:py-32 bg-[#0d5c2e] overflow-hidden scroll-mt-32"
+    >
       {/* Abstract background shapes */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-yellow-400/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl" />
@@ -23,14 +23,14 @@ const ImportantDates = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           
           {/* Registration Deadline */}
-          <div className="group relative bg-white/5 backdrop-blur-xl border border-white/10 p-10 rounded-[40px] hover:bg-white/10 transition-all duration-500 overflow-hidden">
+          <div className="group relative bg-white/5 backdrop-blur-xl border border-white/10 p-6 md:p-10 rounded-[40px] hover:bg-white/10 transition-all duration-500 overflow-hidden">
             <div className="absolute top-0 right-0 w-24 h-24 bg-yellow-400/10 rounded-bl-full group-hover:scale-150 transition-transform duration-700" />
             <div className="relative z-10">
-              <div className="w-14 h-14 bg-yellow-400 text-[#0d5c2e] rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-                <Clock size={28} />
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-yellow-400 text-[#0d5c2e] rounded-2xl flex items-center justify-center mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-500">
+                <Clock size={24} className="md:w-[28px] md:h-[28px]" />
               </div>
-              <h3 className="text-white font-black text-xl mb-2 opacity-60 uppercase tracking-widest text-sm">Last Date of Registration</h3>
-              <p className="text-3xl md:text-4xl font-black text-white leading-tight">
+              <h3 className="text-white font-black opacity-60 uppercase tracking-widest text-[10px] md:text-sm mb-2">Last Date of Registration</h3>
+              <p className="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-tight">
                 JANUARY 02ND, <br />
                 <span className="text-yellow-400">2026</span>
               </p>
@@ -38,14 +38,14 @@ const ImportantDates = () => {
           </div>
 
           {/* FDP Dates */}
-          <div className="group relative bg-white/10 backdrop-blur-xl border border-white/20 p-10 rounded-[40px] hover:bg-white/20 transition-all duration-500 overflow-hidden shadow-2xl">
+          <div className="group relative bg-white/10 backdrop-blur-xl border border-white/20 p-6 md:p-10 rounded-[40px] hover:bg-white/20 transition-all duration-500 overflow-hidden shadow-2xl">
             <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-bl-full group-hover:scale-150 transition-transform duration-700" />
             <div className="relative z-10">
-              <div className="w-14 h-14 bg-white text-[#0d5c2e] rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-                <Calendar size={28} />
+              <div className="w-12 h-12 md:w-14 md:h-14 bg-white text-[#0d5c2e] rounded-2xl flex items-center justify-center mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-500">
+                <Calendar size={24} className="md:w-[28px] md:h-[28px]" />
               </div>
-              <h3 className="text-white font-black text-xl mb-2 opacity-60 uppercase tracking-widest text-sm">Event Duration</h3>
-              <p className="text-3xl md:text-4xl font-black text-white leading-tight">
+              <h3 className="text-white font-black opacity-60 uppercase tracking-widest text-[10px] md:text-sm mb-2">Event Duration</h3>
+              <p className="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-tight">
                 JANUARY 5TH – 10TH, <br />
                 <span className="text-yellow-400">2026</span>
               </p>

@@ -9,56 +9,56 @@ const HeroSection = () => {
   const LOGO_ATAL = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/68ec921c-43a1-4e43-aa69-d9b676eb63ee-sitrc-sandipfoundation-org/assets/images/l1-2.png";
   const INSTITUTE_IMAGE = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image-1766039634850.png?width=8000&height=8000&resize=contain";
 
-  const LetterPull = ({ text, className, delay = 0 }: { text: string; className?: string; delay?: number }) => {
-    const letters = Array.from(text);
-    
-    const container = {
-      hidden: { opacity: 0 },
-      visible: {
-        opacity: 1,
-        transition: { 
-          staggerChildren: 0.03, 
-          delayChildren: delay 
+    const LetterPull = ({ text, className, delay = 0 }: { text: string; className?: string; delay?: number }) => {
+      const letters = Array.from(text);
+      
+      const container = {
+        hidden: { opacity: 0 },
+        visible: {
+          opacity: 1,
+          transition: { 
+            staggerChildren: 0.03, 
+            delayChildren: delay 
+          },
         },
-      },
-    };
+      };
 
-    const child = {
-      visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-          type: "spring",
-          damping: 12,
-          stiffness: 200,
+      const child = {
+        visible: {
+          opacity: 1,
+          x: 0,
+          transition: {
+            type: "spring",
+            damping: 12,
+            stiffness: 200,
+          },
         },
-      },
-      hidden: {
-        opacity: 0,
-        x: -20,
-      },
-    };
+        hidden: {
+          opacity: 0,
+          x: -20,
+        },
+      };
 
-    return (
-        <motion.span
-          variants={container}
-          initial="hidden"
-          animate="visible"
-          className={`whitespace-nowrap ${className}`}
-          style={{ display: "inline-block" }}
-        >
-        {letters.map((letter, index) => (
+      return (
           <motion.span
-            key={index}
-            variants={child}
-            style={{ display: "inline-block", whiteSpace: "pre" }}
+            variants={container}
+            initial="hidden"
+            animate="visible"
+            className={`${className}`}
+            style={{ display: "inline-block" }}
           >
-            {letter}
-          </motion.span>
-        ))}
-      </motion.span>
-    );
-  };
+          {letters.map((letter, index) => (
+            <motion.span
+              key={index}
+              variants={child}
+              style={{ display: "inline-block", whiteSpace: "pre" }}
+            >
+              {letter}
+            </motion.span>
+          ))}
+        </motion.span>
+      );
+    };
 
   return (
     <section 
@@ -88,73 +88,72 @@ const HeroSection = () => {
         <div className="container relative z-20 mx-auto px-6 lg:max-w-[1280px]">
           <div className="grid lg:grid-cols-12 gap-8 items-center">
             
-                {/* Left Content */}
-                <div className="lg:col-span-8 text-white pr-4">
+                  <div className="lg:col-span-8 text-white pr-4 text-center lg:text-left">
+                    <motion.div 
+                      initial={{ opacity: 0, x: -50 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.8 }}
+                      className="flex flex-wrap items-center justify-center lg:justify-start gap-6 mb-12 md:mb-16"
+                    >
+                    <div className="flex items-center gap-4">
+                      <div className="bg-white/10 backdrop-blur-md p-2 rounded-2xl border border-white/20">
+                        <Image src={LOGO_AICTE} alt="AICTE" width={44} height={44} className="h-9 md:h-11 w-auto object-contain" />
+                      </div>
+                      <div className="bg-white/10 backdrop-blur-md p-2 rounded-2xl border border-white/20">
+                        <Image src={LOGO_ATAL} alt="ATAL" width={44} height={44} className="h-9 md:h-11 w-auto object-contain" />
+                      </div>
+                    </div>
+                      <div className="h-10 w-px bg-white/30 mx-2 hidden sm:block" />
+                      <div>
+                        <span className="block text-[10px] font-bold tracking-widest uppercase opacity-70 mb-1">Sponsored By</span>
+                        <span className="block text-sm md:text-base font-extrabold text-yellow-400 leading-tight">AICTE Training and Learning (ATAL) Academy</span>
+                        <span className="block text-[10px] md:text-xs font-bold text-white/60 mt-1">FDP ID: 1748495741</span>
+                      </div>
+                    </motion.div>
+
+                    <motion.div 
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, delay: 0.2 }}
+                      className="space-y-1 mb-8"
+                    >
+                      <span className="inline-block px-3 py-1 rounded-full bg-yellow-400/20 border border-yellow-400/30 text-yellow-400 text-[10px] font-bold tracking-wider uppercase mb-2">
+                        Faculty Development Program
+                      </span>
+                        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-[5.5rem] font-black leading-[0.9] lg:leading-[0.85] tracking-tighter">
+                          <LetterPull text="ENERGY," delay={0.4} /><br className="hidden md:block" />{" "}
+                          <LetterPull 
+                            text="SUSTAINABILITY" 
+                            delay={0.7}
+                            className="text-yellow-400 drop-shadow-[0_0_15px_rgba(250,204,21,0.3)]" 
+                          /><br className="hidden md:block" />{" "}
+                          <LetterPull text="& CLIMATE" delay={1.1} /><br className="hidden md:block" />{" "}
+                          <LetterPull text="CHANGE" delay={1.4} />
+                        </h1>
+                    </motion.div>
+
                   <motion.div 
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="flex flex-wrap items-center gap-6 mb-16"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    className="flex flex-wrap items-center justify-center lg:justify-start gap-6 mb-8"
                   >
-                  <div className="flex items-center gap-4">
-                    <div className="bg-white/10 backdrop-blur-md p-2 rounded-2xl border border-white/20">
-                      <Image src={LOGO_AICTE} alt="AICTE" width={44} height={44} className="h-11 w-auto object-contain" />
+                    <div className="bg-white text-[#0d5c2e] px-7 py-4 rounded-2xl shadow-2xl flex flex-col border-b-4 border-yellow-500 hover:scale-105 transition-transform">
+                      <span className="text-[10px] font-bold uppercase opacity-60">FDP Dates</span>
+                      <span className="text-lg md:text-xl font-black">5 - 10 JAN 2026</span>
                     </div>
-                    <div className="bg-white/10 backdrop-blur-md p-2 rounded-2xl border border-white/20">
-                      <Image src={LOGO_ATAL} alt="ATAL" width={44} height={44} className="h-11 w-auto object-contain" />
-                    </div>
-                  </div>
-                    <div className="h-10 w-px bg-white/30 mx-2 hidden sm:block" />
-                    <div>
-                      <span className="block text-[10px] font-bold tracking-widest uppercase opacity-70 mb-1">Sponsored By</span>
-                      <span className="block text-base font-extrabold text-yellow-400 leading-tight">AICTE Training and Learning (ATAL) Academy</span>
-                      <span className="block text-xs font-bold text-white/60 mt-1">FDP ID: 1748495741</span>
+                    <div className="flex flex-col">
+                      <span className="text-xs font-bold uppercase text-white/70">Organized By</span>
+                      <span className="text-base md:text-lg font-extrabold leading-tight">Department of Chemical Engineering</span>
                     </div>
                   </motion.div>
 
                   <motion.div 
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="space-y-1 mb-8"
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                    className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4"
                   >
-                    <span className="inline-block px-3 py-1 rounded-full bg-yellow-400/20 border border-yellow-400/30 text-yellow-400 text-[10px] font-bold tracking-wider uppercase mb-2">
-                      Faculty Development Program
-                    </span>
-                      <h1 className="text-4xl md:text-6xl lg:text-[5.5rem] font-black leading-[0.85] tracking-tighter">
-                        <LetterPull text="ENERGY," delay={0.4} /><br />
-                        <LetterPull 
-                          text="SUSTAINABILITY" 
-                          delay={0.7}
-                          className="text-yellow-400 drop-shadow-[0_0_15px_rgba(250,204,21,0.3)]" 
-                        /><br />
-                        <LetterPull text="& CLIMATE" delay={1.1} /><br />
-                        <LetterPull text="CHANGE" delay={1.4} />
-                      </h1>
-                  </motion.div>
-
-                <motion.div 
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                  className="flex flex-wrap items-center gap-6 mb-8"
-                >
-                  <div className="bg-white text-[#0d5c2e] px-7 py-4 rounded-2xl shadow-2xl flex flex-col border-b-4 border-yellow-500 hover:scale-105 transition-transform">
-                    <span className="text-[10px] font-bold uppercase opacity-60">FDP Dates</span>
-                    <span className="text-xl font-black">5 - 10 JAN 2026</span>
-                  </div>
-                  <div className="flex flex-col">
-                    <span className="text-xs font-bold uppercase text-white/70">Organized By</span>
-                    <span className="text-lg font-extrabold leading-tight">Department of Chemical Engineering</span>
-                  </div>
-                </motion.div>
-
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.6 }}
-                  className="flex flex-col sm:flex-row gap-4"
-                >
                   <a 
                     href="https://atalacademy.aicte-india.org/login" 
                     target="_blank" 

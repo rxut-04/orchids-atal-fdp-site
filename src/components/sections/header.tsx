@@ -48,10 +48,10 @@ const Header = () => {
                     className="h-10 w-auto"
                   />
               </div>
-              <div className="flex flex-col">
-                <span className="text-white font-black text-xl leading-none tracking-tighter">SVIT NASHIK</span>
-                <span className="text-yellow-400 font-bold text-[10px] tracking-widest uppercase opacity-80">ATAL FDP 2026</span>
-              </div>
+                <div className="flex flex-col">
+                  <span className="text-white font-black text-lg md:text-xl leading-none tracking-tighter">SVIT NASHIK</span>
+                  <span className="text-yellow-400 font-bold text-[9px] md:text-[10px] tracking-widest uppercase opacity-80">ATAL FDP 2026</span>
+                </div>
             </a>
 
             {/* Desktop Navigation */}

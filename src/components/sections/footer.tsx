@@ -187,7 +187,7 @@ const Footer = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative w-full h-[300px] rounded-[40px] overflow-hidden group mb-20 shadow-2xl border border-white/10"
+          className="relative w-full min-h-[400px] md:h-[300px] rounded-[40px] overflow-hidden group mb-20 shadow-2xl border border-white/10"
         >
           <Image 
             src={INSTITUTE_IMAGE}
@@ -195,24 +195,24 @@ const Footer = () => {
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-1000"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#032b15] via-transparent to-transparent opacity-80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#032b15] via-[#032b15]/40 to-transparent opacity-90" />
           <div className="absolute inset-0 bg-[#0d5c2e]/20 group-hover:bg-transparent transition-colors duration-500" />
           
-          <div className="absolute bottom-8 left-8 right-8 flex flex-col md:flex-row justify-between items-end md:items-center gap-6">
+          <div className="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 md:right-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
             <div className="max-w-xl">
               <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-400/20 text-yellow-400 text-[10px] font-black uppercase tracking-widest mb-4 border border-yellow-400/20">
                 <Building2 size={12} />
                 Visit Our Campus
               </span>
-              <h2 className="text-3xl font-black text-white tracking-tight">Sir Visvesvaraya Institute of Technology</h2>
-              <p className="text-white/60 font-bold text-sm mt-2">Accredited by NAAC (Cycle 1) | Approved by AICTE New Delhi</p>
+              <h2 className="text-2xl md:text-3xl font-black text-white tracking-tight leading-tight">Sir Visvesvaraya Institute of Technology</h2>
+              <p className="text-white/60 font-bold text-xs mt-2">Accredited by NAAC (Cycle 1) | Approved by AICTE New Delhi</p>
             </div>
             
             <a 
               href="https://svitnashik.in" 
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-yellow-400 text-[#0d5c2e] rounded-2xl font-black text-sm hover:bg-white transition-all shadow-xl flex items-center gap-2 group"
+              className="w-full md:w-auto px-8 py-4 bg-yellow-400 text-[#0d5c2e] rounded-2xl font-black text-sm hover:bg-white transition-all shadow-xl flex items-center justify-center gap-2 group"
             >
               Take Virtual Tour
               <Globe size={16} className="group-hover:rotate-12 transition-transform" />
