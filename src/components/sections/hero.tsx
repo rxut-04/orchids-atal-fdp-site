@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <section 
       id="home"
-      className="relative h-screen flex items-center pt-24 lg:pt-28 pb-10 overflow-hidden scroll-mt-32"
+      className="relative min-h-[105vh] flex items-center pt-24 lg:pt-32 pb-20 overflow-hidden scroll-mt-32"
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
