@@ -40,13 +40,13 @@ const HeroSection = () => {
     };
 
     return (
-      <motion.span
-        variants={container}
-        initial="hidden"
-        animate="visible"
-        className={className}
-        style={{ display: "inline-block" }}
-      >
+        <motion.span
+          variants={container}
+          initial="hidden"
+          animate="visible"
+          className={`whitespace-nowrap ${className}`}
+          style={{ display: "inline-block" }}
+        >
         {letters.map((letter, index) => (
           <motion.span
             key={index}
@@ -63,7 +63,7 @@ const HeroSection = () => {
   return (
     <section 
       id="home"
-      className="relative min-h-[105vh] flex items-center pt-24 lg:pt-32 pb-20 overflow-hidden scroll-mt-32"
+      className="relative min-h-[100vh] flex items-center pt-20 lg:pt-28 pb-16 overflow-hidden scroll-mt-32"
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
@@ -119,7 +119,7 @@ const HeroSection = () => {
                   <span className="inline-block px-3 py-1 rounded-full bg-yellow-400/20 border border-yellow-400/30 text-yellow-400 text-[11px] font-bold tracking-wider uppercase mb-1">
                     Faculty Development Program
                   </span>
-                  <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.85] tracking-tighter">
+                  <h1 className="text-4xl md:text-6xl lg:text-[7rem] font-black leading-[0.85] tracking-tighter">
                     <LetterPull text="ENERGY," delay={0.4} /><br />
                     <LetterPull 
                       text="SUSTAINABILITY" 
@@ -136,13 +136,13 @@ const HeroSection = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="flex flex-wrap items-center gap-4 mb-8"
               >
-                <div className="bg-white text-[#0d5c2e] px-8 py-4 rounded-2xl shadow-2xl flex flex-col border-b-4 border-yellow-500 hover:scale-105 transition-transform">
+                <div className="bg-white text-[#0d5c2e] px-7 py-3.5 rounded-2xl shadow-2xl flex flex-col border-b-4 border-yellow-500 hover:scale-105 transition-transform">
                   <span className="text-[10px] font-bold uppercase opacity-60">FDP Dates</span>
-                  <span className="text-2xl font-black">5 - 10 JAN 2026</span>
+                  <span className="text-xl font-black">5 - 10 JAN 2026</span>
                 </div>
                 <div className="flex flex-col">
                   <span className="text-[11px] font-bold uppercase text-white/70">Organized By</span>
-                  <span className="text-xl font-extrabold leading-tight">Department of Chemical Engineering</span>
+                  <span className="text-lg font-extrabold leading-tight">Department of Chemical Engineering</span>
                 </div>
               </motion.div>
 
@@ -156,14 +156,14 @@ const HeroSection = () => {
                   href="https://atalacademy.aicte-india.org/login" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="group relative px-10 py-5 bg-yellow-400 text-[#0d5c2e] font-black text-lg rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(250,204,21,0.5)] overflow-hidden text-center"
+                  className="group relative px-8 py-4 bg-yellow-400 text-[#0d5c2e] font-black text-base rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(250,204,21,0.5)] overflow-hidden text-center"
                 >
                   <span className="relative z-10">REGISTER NOW</span>
                   <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300 opacity-20" />
                 </a>
                 <a 
                   href="#about" 
-                  className="px-10 py-5 bg-white/10 backdrop-blur-md border border-white/30 text-white font-black text-lg rounded-2xl transition-all duration-300 hover:bg-white/20 text-center"
+                  className="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/30 text-white font-black text-base rounded-2xl transition-all duration-300 hover:bg-white/20 text-center"
                 >
                   LEARN MORE
                 </a>
@@ -176,32 +176,32 @@ const HeroSection = () => {
                 initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
                 transition={{ duration: 1, delay: 0.5, type: "spring" }}
-                className="bg-white/10 backdrop-blur-2xl border border-white/20 p-8 rounded-[40px] shadow-2xl relative group"
+                className="bg-white/10 backdrop-blur-2xl border border-white/20 p-6 rounded-[35px] shadow-2xl relative group"
               >
-                <div className="absolute -inset-0.5 bg-gradient-to-br from-white/30 to-transparent rounded-[40px] opacity-20 blur-sm group-hover:opacity-40 transition-opacity" />
+                <div className="absolute -inset-0.5 bg-gradient-to-br from-white/30 to-transparent rounded-[35px] opacity-20 blur-sm group-hover:opacity-40 transition-opacity" />
                 <div className="relative">
-                  <div className="bg-white p-5 rounded-3xl shadow-xl mb-6 flex justify-center">
+                  <div className="bg-white p-4 rounded-3xl shadow-xl mb-5 flex justify-center">
                     <Image 
                       src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/PRAVARA_LOGO-1766039988502.png?width=8000&height=8000&resize=contain"
                       alt="Pravara Logo"
-                      width={120}
-                      height={120}
+                      width={110}
+                      height={110}
                       className="object-contain hover:scale-110 transition-transform duration-500"
                     />
                   </div>
                   <div className="text-center space-y-3">
-                    <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-white/60">Founded by</p>
+                    <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-white/60">Founded by</p>
                     <p className="text-xs italic font-semibold leading-relaxed">
                       Loknete Dr. Balasaheb Vikhe Patil <br />
-                      <span className="text-[9px] uppercase font-black not-italic px-2 py-0.5 bg-white/20 text-white rounded-sm">(Padma Bhushan Awardee)</span>
+                      <span className="text-[8px] uppercase font-black not-italic px-2 py-0.5 bg-white/20 text-white rounded-sm">(Padma Bhushan Awardee)</span>
                     </p>
-                    <div className="w-12 h-1 bg-white/20 mx-auto rounded-full" />
-                    <p className="text-lg font-black leading-tight">
+                    <div className="w-10 h-0.5 bg-white/20 mx-auto rounded-full" />
+                    <p className="text-base font-black leading-tight">
                       SIR VISVESVARAYA <br />
                       INSTITUTE OF TECHNOLOGY, <br />
                       NASHIK
                     </p>
-                    <div className="flex flex-col gap-1 text-[10px] font-bold text-white/70">
+                    <div className="flex flex-col gap-1 text-[9px] font-bold text-white/70">
                       <span className="bg-white/5 py-1 px-2 rounded-lg">NAAC &apos;B+&apos; GRADE ACCREDITED (CYCLE 1)</span>
                       <span className="bg-white/5 py-1 px-2 rounded-lg">AFFILIATED TO SPPU, PUNE</span>
                     </div>
