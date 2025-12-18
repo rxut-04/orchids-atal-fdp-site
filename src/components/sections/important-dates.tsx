@@ -3,10 +3,10 @@ import { Calendar, Clock } from 'lucide-react';
 
 const ImportantDates = () => {
   return (
-    <section 
-      id="dates" 
-      className="relative py-24 lg:py-32 bg-[#0d5c2e] overflow-hidden"
-    >
+      <section 
+        id="dates" 
+        className="relative py-24 lg:py-32 bg-[#0d5c2e] overflow-hidden scroll-mt-32"
+      >
       {/* Abstract background shapes */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-yellow-400/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl" />

@@ -6,7 +6,7 @@ const Footer = () => {
   const INSTITUTE_IMAGE = "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image-1766039634850.png?width=8000&height=8000&resize=contain";
 
   return (
-    <footer id="contact" className="w-full bg-[#0d5c2e] text-white overflow-hidden">
+    <footer id="contact" className="w-full bg-[#0d5c2e] text-white overflow-hidden scroll-mt-32">
       
       {/* Upper Footer: Contact & Map */}
       <div className="container mx-auto px-6 lg:max-w-[1280px] py-24 lg:py-32">

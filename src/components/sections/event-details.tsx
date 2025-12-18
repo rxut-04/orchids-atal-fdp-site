@@ -17,7 +17,7 @@ const EventDetails: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 lg:py-32 bg-[#f8f9fa] relative overflow-hidden" id="resource-persons">
+    <section className="py-24 lg:py-32 bg-[#f8f9fa] relative overflow-hidden scroll-mt-32" id="resource-persons">
       {/* Decorative Blur */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-[#0d5c2e]/5 rounded-full blur-[120px]" />
 

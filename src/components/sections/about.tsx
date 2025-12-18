@@ -3,10 +3,10 @@ import { Info, Target, Lightbulb, Users } from 'lucide-react';
 
 const AboutSection = () => {
   return (
-    <section 
-      id="about" 
-      className="bg-[#f8f9fa] relative py-24 lg:py-32 overflow-hidden"
-    >
+      <section 
+        id="about" 
+        className="bg-[#f8f9fa] relative py-24 lg:py-32 overflow-hidden scroll-mt-32"
+      >
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#0d5c2e]/5 rounded-bl-[200px] -z-0" />
       <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-yellow-400/5 rounded-tr-[150px] -z-0" />

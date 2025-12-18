@@ -3,10 +3,10 @@ import { Users, Award, Zap } from 'lucide-react';
 
 const WhoShouldAttend = () => {
   return (
-    <section 
-      id="who-should-attend" 
-      className="bg-white py-24 lg:py-32 relative overflow-hidden"
-    >
+      <section 
+        id="who-should-attend" 
+        className="bg-white py-24 lg:py-32 relative overflow-hidden scroll-mt-32"
+      >
       <div className="container relative z-10 mx-auto px-6 lg:max-w-[1280px]">
         
         <div className="text-center mb-16">

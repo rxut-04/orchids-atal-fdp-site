@@ -62,7 +62,7 @@ const Committees = () => {
   ];
 
   return (
-    <section id="committes" className="py-24 bg-white overflow-hidden">
+      <section id="committes" className="py-24 bg-white overflow-hidden scroll-mt-32">
       <div className="container mx-auto px-6 lg:max-w-[1280px]">
         
         {/* Section Heading */}
