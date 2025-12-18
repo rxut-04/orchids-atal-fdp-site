@@ -1,70 +1,90 @@
 import React from 'react';
-import Image from 'next/image';
 
 const AboutSection = () => {
   return (
     <section 
       id="about" 
-      className="bg-[#f8f9fa] bg-texture relative py-12 lg:py-16 overflow-hidden"
-      style={{
-        backgroundImage: `url('https://www.transparenttextures.com/patterns/natural-paper.png')`,
-      }}
+      className="bg-[#f8f9fa] relative py-12 lg:py-16 overflow-hidden"
     >
       <div className="container mx-auto px-4 max-w-[1170px]">
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="space-y-10">
-              
-              {/* About Sitrc */}
-              <div className="about-item">
-                <h2 className="text-[32px] font-display font-bold text-[#1c1c1c] mb-6 capitalize leading-[1.2] flex flex-wrap gap-x-3">
-                  <span className="animate-in fade-in slide-in-from-bottom duration-700">About</span>
-                  <span className="animate-in fade-in slide-in-from-bottom duration-700 delay-100">Sitrc</span>
-                </h2>
-                <p className="text-[16px] leading-[1.6] text-[#1c1c1c] text-justify font-body">
-                  Sandip Institute of Technology and Research Center (SITRC), the top engineering college in Nashik, Maharashtra is established in 2008 and is approved by All India Council for Technical Education, New Delhi Government of India and An Autonomous Institute permanently affiliated to Savitribai Phule Pune University, Pune. The Institute is accredited by NAAC with &apos;A&apos; grade and comprehensive score of 3.11, an ISO 9001:2008 certified which provides uncompromising quality infrastructure (Faculty & facilities simply world class). This commitment is reflected in the investments made by the Institute in providing facilities to students in terms of laboratories, equipment, library books, sports, transportation and everything it takes to create an excellent environment for learning. On visiting the Campus, one is struck by the aesthetic and elegant buildings, splendid lawns, spacious sports grounds and lush green environment conducive for teaching-learning process. The Campus boasts of in-house facilities like state-of-the-art labs, spacious classrooms (with Audio-Video teaching aids), mess with hygienic food, college canteen, health care centre, gym etc. to cater all necessities of the student and the staff, ultramodern hostel facilities with beautiful surroundings. 250+ acres of Campus is about 12 km away from Nashik city. SITRC has an ambiance that stimulates intellectual thinking and academic proceedings (Teaching and Learning Process).
-                </p>
-              </div>
+        <div className="space-y-10">
+          
+          <div className="about-item">
+            <h2 className="text-[28px] md:text-[32px] font-display font-bold text-[#0d5c2e] mb-6 capitalize leading-[1.2]">
+              About Pravara Rural Education Society
+            </h2>
+            <p className="text-[16px] leading-[1.8] text-[#1c1c1c] text-justify font-body">
+              The Pravara Rural Education Society was established in July 1964 by Late Padmashri Dr. Vitthalrao Vikhe Patil, a visionary, philanthropist, and the pioneer behind the first cooperative sugar factory in the cooperative sector — not just in India, but in all of Asia. His mission was to make technical education accessible and affordable in rural areas. Carrying forward this legacy, Late Padmabhushan Dr. Balasaheb Vikhe Patil, an eminent leader in Maharashtra and a Member of Parliament for over three decades, undertook the monumental task of transforming this vision into reality through dedicated planning and execution. The Society today stands as a symbol of academic excellence, offering quality education from pre-primary to doctorate levels.
+            </p>
+            <p className="text-[16px] leading-[1.8] text-[#1c1c1c] text-justify font-body mt-4">
+              Under the dynamic leadership of Hon&apos;ble Chairman Namdar Shri Radhakrishna Vikhe Patil and CEO Dr. Sushmita Vikhe Patil, the Society continues to make remarkable strides in enhancing the quality and reach of education, upholding its commitment to educational empowerment in rural India.
+            </p>
+          </div>
 
-              {/* About Department of Computer Engineering */}
-              <div className="about-item">
-                <h2 className="text-[32px] font-display font-bold text-[#1c1c1c] mb-6 capitalize leading-[1.2] flex flex-wrap gap-x-3">
-                  <span className="animate-in fade-in slide-in-from-bottom duration-700">About</span>
-                  <span className="animate-in fade-in slide-in-from-bottom duration-700 delay-100">Department</span>
-                  <span className="animate-in fade-in slide-in-from-bottom duration-700 delay-200">of</span>
-                  <span className="animate-in fade-in slide-in-from-bottom duration-700 delay-300">Computer</span>
-                  <span className="animate-in fade-in slide-in-from-bottom duration-700 delay-400">Engineering</span>
-                </h2>
-                <p className="text-[16px] leading-[1.6] text-[#1c1c1c] text-justify font-body">
-                  The Department of Computer Engineering offers B.E. and M.E. programs with a strong emphasis on Outcome-Based Education (OBE). It has been NBA Accredited (2020-21 to 2022-23) and Re-Accredited (2023-24 to 2025-26), making it one of the most prestigious programs in the University’s jurisdiction, North Maharashtra region, and across India. The department is committed to research excellence, industry collaboration, and innovation-driven education, fostering advancements in computing, AI, and emerging technologies.
-                </p>
-              </div>
+          <div className="about-item">
+            <h2 className="text-[28px] md:text-[32px] font-display font-bold text-[#0d5c2e] mb-6 capitalize leading-[1.2]">
+              About The Institute
+            </h2>
+            <p className="text-[16px] leading-[1.8] text-[#1c1c1c] text-justify font-body">
+              Sir Visvesvaraya Institute of Technology, established by the Pravara Rural Education Society in 1998–99, offers undergraduate programs in Chemical Engineering, Computer Engineering, Information Technology, and Electronics &amp; Computer Engineering, along with a postgraduate program in Master of Business Administration (MBA).
+            </p>
+            <p className="text-[16px] leading-[1.8] text-[#1c1c1c] text-justify font-body mt-4">
+              The institute boasts a team of highly qualified, dedicated, and committed faculty members. A positive and collaborative environment exists between the staff and students, fostering academic growth and innovation. Emphasis is placed on delivering quality technical education, supported by state-of-the-art laboratories and modern equipment, to prepare students for the global challenges.
+            </p>
+          </div>
 
-              {/* About Nashik */}
-              <div className="about-item">
-                <h2 className="text-[32px] font-display font-bold text-[#1c1c1c] mb-6 capitalize leading-[1.2] flex flex-wrap gap-x-3">
-                  <span className="animate-in fade-in slide-in-from-bottom duration-700">About</span>
-                  <span className="animate-in fade-in slide-in-from-bottom duration-700 delay-100">Nashik</span>
-                </h2>
-                <p className="text-[16px] leading-[1.6] text-[#1c1c1c] text-justify font-body">
-                  Nashik also called as Nasik (listen) is a city in the northern region of the Indian state of Maharashtra. Situated on the banks of river Godavari, Nashik is the third largest metropolitan area in Maharashtra after Mumbai and Pune. District population of Nashik is around 80 lakhs. Nashik is located about 190 km north of state capital Mumbai, and about 210 km from Pune; together informally called the &quot;Golden Triangle of Maharashtra&quot;. Nashik is well known for being one of the Hindu pilgrimage sites of the Kumbh Mela, which is held every 12 years. The city is called the &quot;Wine Capital of India&quot; as more than half of India&apos;s vineyards and wineries are located here. Around 90% of all Indian wine comes from the Nashik Valley.
-                </p>
-              </div>
+          <div className="about-item">
+            <h2 className="text-[28px] md:text-[32px] font-display font-bold text-[#0d5c2e] mb-6 capitalize leading-[1.2]">
+              About Department of Chemical Engineering
+            </h2>
+            <p className="text-[16px] leading-[1.8] text-[#1c1c1c] text-justify font-body">
+              The department is supported by a team of dynamic, experienced and highly qualified faculty members committed to academic excellence and student development. To foster innovation and technical skills, the department organizes an annual state-level event, <strong>&quot;Chemcoalesce&quot;</strong>, which includes paper and project competitions.
+            </p>
+            <p className="text-[16px] leading-[1.8] text-[#1c1c1c] text-justify font-body mt-4">
+              The department has been the recipient of several grants from AICTE under the MODROBS scheme, and has also secured multiple BCUD grants under QIP (Quality Improvement Program) and RPS (Research Promotion Scheme), further enhancing its research and infrastructure capabilities.
+            </p>
+          </div>
 
+          <div className="about-item">
+            <h2 className="text-[28px] md:text-[32px] font-display font-bold text-[#0d5c2e] mb-6 capitalize leading-[1.2]">
+              About The Program
+            </h2>
+            <p className="text-[16px] leading-[1.8] text-[#1c1c1c] text-justify font-body">
+              The Faculty Development Program (FDP) on <strong>&quot;Energy, Sustainability and Climate Change&quot;</strong>, sponsored by AICTE Training and Learning (ATAL) Academy, aims to equip faculty members, researchers, and professionals with the knowledge, tools, and best practices necessary to address some of the most critical challenges of our time.
+            </p>
+            <p className="text-[16px] leading-[1.8] text-[#1c1c1c] text-justify font-body mt-4">
+              As the world grapples with the growing impacts of climate change and energy scarcity, there is an urgent need to transition towards sustainable energy solutions, adopt climate-resilient technologies, and promote environmental stewardship. This FDP provides a multidisciplinary platform to explore the intersection of energy systems, sustainability practices, and climate change mitigation.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="about-item bg-white p-6 rounded-lg shadow-md border-l-4 border-[#0d5c2e]">
+              <h2 className="text-[24px] font-display font-bold text-[#0d5c2e] mb-4">
+                Objectives
+              </h2>
+              <ul className="text-[15px] leading-[1.8] text-[#1c1c1c] font-body space-y-3 list-disc list-inside">
+                <li>To provide faculty members with an understanding of the fundamental concepts of energy, sustainability, and climate change.</li>
+                <li>To explore renewable energy technologies and their role in reducing carbon footprints.</li>
+                <li>To highlight the importance of climate policy, carbon management, and environmental ethics.</li>
+                <li>To promote interdisciplinary research and teaching methodologies for sustainability.</li>
+              </ul>
+            </div>
+
+            <div className="about-item bg-white p-6 rounded-lg shadow-md border-l-4 border-[#0d5c2e]">
+              <h2 className="text-[24px] font-display font-bold text-[#0d5c2e] mb-4">
+                Expected Outcomes
+              </h2>
+              <ul className="text-[15px] leading-[1.8] text-[#1c1c1c] font-body space-y-3 list-disc list-inside">
+                <li>Participants will gain an in-depth understanding of key concepts related to energy systems, sustainability principles, and climate change science.</li>
+                <li>Faculty members will be equipped with relevant content and teaching methodologies to design new courses focused on renewable energy, environmental policy, and SDGs.</li>
+                <li>The FDP will facilitate cross-disciplinary engagement by integrating technical, environmental, and policy aspects.</li>
+                <li>Exposure to recent advances will inspire participants to explore new research opportunities aligned with national and global sustainability agendas.</li>
+              </ul>
             </div>
           </div>
+
         </div>
       </div>
-
-      {/* Background Decorative Element - Small texture overlay if needed */}
-      <div 
-        className="absolute inset-0 pointer-events-none opacity-50"
-        style={{
-          backgroundImage: `url('https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/68ec921c-43a1-4e43-aa69-d9b676eb63ee-sitrc-sandipfoundation-org/assets/images/main-bg1-7.png')`,
-          backgroundSize: 'cover',
-          mixBlendMode: 'multiply'
-        }}
-      ></div>
     </section>
   );
 };
