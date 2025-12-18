@@ -63,7 +63,7 @@ const HeroSection = () => {
   return (
     <section 
       id="home"
-      className="relative min-h-[100vh] flex items-center pt-20 lg:pt-28 pb-16 overflow-hidden scroll-mt-32"
+      className="relative min-h-[100vh] flex items-center pt-16 lg:pt-24 pb-12 overflow-hidden scroll-mt-32"
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
@@ -88,13 +88,13 @@ const HeroSection = () => {
         <div className="container relative z-20 mx-auto px-6 lg:max-w-[1280px]">
           <div className="grid lg:grid-cols-12 gap-8 items-center">
             
-                  <div className="lg:col-span-8 text-white pr-4 text-center lg:text-left">
-                    <motion.div 
-                      initial={{ opacity: 0, x: -50 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.8 }}
-                      className="flex flex-wrap items-center justify-center lg:justify-start gap-6 mb-12 md:mb-16"
-                    >
+                    <div className="lg:col-span-8 text-white pr-4 text-center lg:text-left">
+                      <motion.div 
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="flex flex-wrap items-center justify-center lg:justify-start gap-6 mt-4 md:mt-6 mb-3 md:mb-4"
+                      >
                     <div className="flex items-center gap-4">
                       <div className="bg-white/10 backdrop-blur-md p-2 rounded-2xl border border-white/20">
                         <Image src={LOGO_AICTE} alt="AICTE" width={44} height={44} className="h-9 md:h-11 w-auto object-contain" />
@@ -111,15 +111,15 @@ const HeroSection = () => {
                       </div>
                     </motion.div>
 
-                    <motion.div 
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.2 }}
-                      className="space-y-1 mb-8"
-                    >
-                      <span className="inline-block px-3 py-1 rounded-full bg-yellow-400/20 border border-yellow-400/30 text-yellow-400 text-[10px] font-bold tracking-wider uppercase mb-2">
-                        Faculty Development Program
-                      </span>
+                      <motion.div 
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="space-y-1 mb-6"
+                      >
+                        <span className="inline-block px-3 py-1 rounded-full bg-yellow-400/20 border border-yellow-400/30 text-yellow-400 text-[10px] font-bold tracking-wider uppercase mb-1">
+                          Faculty Development Program
+                        </span>
                         <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-[5.5rem] font-black leading-[0.9] lg:leading-[0.85] tracking-tighter">
                           <LetterPull text="ENERGY," delay={0.4} /><br className="hidden md:block" />{" "}
                           <LetterPull 
@@ -136,7 +136,7 @@ const HeroSection = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
-                    className="flex flex-wrap items-center justify-center lg:justify-start gap-6 mb-8"
+                    className="flex flex-wrap items-center justify-center lg:justify-start gap-6 mb-6"
                   >
                     <div className="bg-white text-[#0d5c2e] px-7 py-4 rounded-2xl shadow-2xl flex flex-col border-b-4 border-yellow-500 hover:scale-105 transition-transform">
                       <span className="text-[10px] font-bold uppercase opacity-60">FDP Dates</span>
